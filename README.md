@@ -1,35 +1,28 @@
-# Delphi-Projects-Template
+# Ko-fi API webhook endpoint
 
 [Cette page en français.](LISEZMOI.md)
 
-**A git repository template for my Delphi (or other) projects.**
+Whether you are streamer on Twitch, youtubeur, tiktoker or content creator, musician, cartoonist, actor or artist, software developer, mobile applications or video games, author or publisher, if you use [Ko-fi](https://ko-fi.com/) to receive donations or payments it may be useful to know in real time. It allows you to automate your deliveries, display alerts, receive notifications or emails.
 
-**This template is distributed under the MIT license. The AGPL license is for the projects I create from this code repository template. Use whatever license you want if you use this template.**
+Ko-fi offers a very simple API to do what you want with [a webhook](https://ko-fi.com/manage/webhooks). They are told the URL of an online program. They call it each time they get a payment.
 
-This code repository contains a project developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
+It's up to us to do something about it then...
 
-## Using this software
+## Use
 
-This software is available in a directly installable or executable production version. It is distributed as shareware.
+In this code repository you will find a folder "src" containing the PHP program "kofi-webhook.php", subfolders and other files.
 
-You can download and redistribute it free of charge, provided you do not modify its content (installer, program, additional files, etc.).
+Set it up with your control token, install it all on your website (preferably in a complicated folder not to fall on it by chance) and give its URL to Ko-fi.
 
-[Download program or installer](DDD)
+At each call (so each payment) the program checks the consistency of what it receives and stores the data in a file in the subfolder "kofi-data" in the form "AAMMJJHHMMSS-xxx.json" (AAAA for the year, MM for the month, JJ for the day, HH for the moment, MM for the minutes, SS for the seconds and xxx as the random alphanumeric value).
 
-If you use this software regularly and are satisfied with it, you are invited to purchase an end-user license. Purchasing a license will give you access to software updates, as well as enabling optional features.
+All you have to do is browse this folder regularly to process its content and do what you need.
 
-[Buy a license](FFF)
-
-You can also [visit the software website](EEE) to find out more about how it works, access videos and articles, find out about the different versions available and their features, contact user support...
+If you want to go further and don't know how to program or don't know how to install all this don't hesitate to [contact me](https://trucs-de-developpeur-web.fr/nous-contacter.php). I can do this for you in the form of service delivery or exchange.
 
 ## Source code installation
 
-To download this code repository, we recommend using "git", but you can also download a ZIP file directly from [its GitHub repository](https://github.com/DeveloppeurPascal/XXXXXXXXXX).
-
-This project uses dependencies in the form of sub-modules. They will be absent from the ZIP file. You'll have to download them by hand.
-
-* [YYY](ZZZ) must be installed in the ./lib-externes/YYY subfolder.
-* [YYY](ZZZ) must be installed in the ./lib-externes/YYY subfolder.
+To download this code repository, we recommend using "git", but you can also download a ZIP file directly from [its GitHub repository](https://github.com/DeveloppeurPascal/KoFi-API-Webhook-Endpoint).
 
 ## License to use this code repository and its contents
 
@@ -48,7 +41,7 @@ Certain elements included in this repository may be subject to third-party usage
 
 ## How to ask a new feature, report a bug or a security issue ?
 
-If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/XXXXXXXXXX) and [open a new issue](https://github.com/DeveloppeurPascal/XXXXXXXXXX/issues).
+If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/KoFi-API-Webhook-Endpoint) and [open a new issue](https://github.com/DeveloppeurPascal/KoFi-API-Webhook-Endpoint/issues).
 
 If you found a security issue please don't report it publicly before a patch is available. Explain the case by [sending a private message to the author](https://developpeur-pascal.fr/nous-contacter.php).
 

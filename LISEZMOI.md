@@ -1,35 +1,28 @@
-# Delphi-Projects-Template
+# Ko-fi API webhook endpoint
 
 [This page in english.](README.md)
 
-**Un modèle de dépôt git pour mes projets Delphi (ou autres).**
+Que vous soyez streameur sur Twitch, youtubeur, tiktokeur ou créateur de contenu, musicien, dessinateur, comédien ou artiste, développeur de logiciels, d'applications mobiles ou de jeux vidéo, auteur ou éditeur, si vous utilisez [Ko-fi](https://ko-fi.com/) pour recevoir des dons ou des paiments il peut être utile de le savoir en temps réel. Ca permet d'automatiser vos livraisons, d'afficher des alertes, de recevoir des notifications ou des emails.
 
-**Ce template est distribué sous licence MIT. La licence AGPL est pour les projets que je crée à partir de ce template de dépôt de code. Utilisez la licence que vous voulez si vous utilisez ce template.**
+Ko-fi propose une API très simple pour faire ce que l'on veut à l'aide d'[un webhook](https://ko-fi.com/manage/webhooks). On leur déclare l'URL d'un programme en ligne. Ils l'appellent à chaque fois qu'ils reçoivent un paiement.
 
-Ce dépôt de code contient un projet développé en langage Pascal Objet sous Delphi. Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
+A nous d'en faire quelque chose ensuite...
 
-## Utiliser ce logiciel
+## Utilisation
 
-Ce logiciel est disponible dans une version de production directement installable ou exécutable. Il est distribué en shareware.
+Dans ce dépôt de code vous trouverez un dossier "src" contenant le programme PHP "kofi-webhook.php", des sous-dossiers et d'autres fichiers.
 
-Vous pouvez le télécharger et le rediffuser gratuitement à condition de ne pas en modifier le contenu (installeur, programme, fichiers annexes, ...).
+Paramétrez le avec votre token de contrôle, installez le tout sur votre site web (de préférence dans un dossier compliqué pour ne pas tomber dessus par hasard) et donnez son URL à Ko-fi.
 
-[Télécharger le programme ou son installeur](DDD)
+A chaque appel (donc à chaque paiement) le programme contrôle la cohérence de ce qu'il reçoit et stocke les données dans un fichier du sous-dossier "kofi-data" sous la forme "AAMMJJHHMMSS-xxx.json" (AAAA pour l'année, MM pour le mois, JJ pour le jour, HH pour l'heure, MM pour les minutes, SS pour les secondes et xxx comme valeur alphanumérique aléatoire).
 
-Si vous utilisez régulièrement ce logiciel et en êtes satisfait vous êtes invité à en acheter une licence d'utilisateur final. L'achat d'une licence vous donnera accès aux mises à jour du logiciel en plus d'activer d'évenuelles fonctionnalités optionnelles.
+Vous n'avez plus qu'à parcourir régulièrement ce dossier pour traiter son contenu et en faire ce dont vous avez besoin.
 
-[Acheter une licence](FFF)
-
-Vous pouvez aussi [consulter le site du logiciel](EEE) pour en savoir plus sur son fonctionnement, accéder à des vidéos et articles, connaître les différentes versions disponibles et leurs fonctionnalités, contacter le support utilisateurs...
+Si vous voulez aller plus loin et ne savez pas programmer ou ne savez pas comment installer tout ça n'hésitez pas à [me contacter](https://trucs-de-developpeur-web.fr/nous-contacter.php). Je pourrai le faire pour vous sous forme de prestation ou échange de service.
 
 ## Installation des codes sources
 
-Pour télécharger ce dépôt de code il est recommandé de passer par "git" mais vous pouvez aussi télécharger un ZIP directement depuis [son dépôt GitHub](https://github.com/DeveloppeurPascal/XXXXXXXXXX).
-
-Ce projet utilise des dépendances sous forme de sous modules. Ils seront absents du fichier ZIP. Vous devrez les télécharger à la main.
-
-* [YYY](ZZZ) doit être installé dans le sous dossier ./lib-externes/YYY
-* [YYY](ZZZ) doit être installé dans le sous dossier ./lib-externes/YYY
+Pour télécharger ce dépôt de code il est recommandé de passer par "git" mais vous pouvez aussi télécharger un ZIP directement depuis [son dépôt GitHub](https://github.com/DeveloppeurPascal/KoFi-API-Webhook-Endpoint).
 
 ## Licence d'utilisation de ce dépôt de code et de son contenu
 
@@ -48,7 +41,7 @@ Certains éléments inclus dans ce dépôt peuvent dépendre de droits d'utilisa
 
 ## Comment demander une nouvelle fonctionnalité, signaler un bogue ou une faille de sécurité ?
 
-Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur GitHub](https://github.com/DeveloppeurPascal/XXXXXXXXXX) et [d'ouvrir un ticket](https://github.com/DeveloppeurPascal/XXXXXXXXXX/issues).
+Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur GitHub](https://github.com/DeveloppeurPascal/KoFi-API-Webhook-Endpoint) et [d'ouvrir un ticket](https://github.com/DeveloppeurPascal/KoFi-API-Webhook-Endpoint/issues).
 
 Si vous avez trouvé une faille de sécurité n'en parlez pas en public avant qu'un correctif n'ait été déployé ou soit disponible. [Contactez l'auteur du dépôt en privé](https://developpeur-pascal.fr/nous-contacter.php) pour expliquer votre trouvaille.
 
