@@ -92,3 +92,5 @@ TMSWeb/
 # Private directory
 _PRIVATE/
 _PRIVE/
+
+config-release.inc.php
