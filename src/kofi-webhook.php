@@ -22,7 +22,7 @@
 		if (is_object($json)) {
 			if (isset($json->verification_token) && (! empty($json->verification_token)) && ($json->verification_token == CVerificationToken)) {
 				if (CLogAsJSONFile) {
-					$filename = "kofi-data/".date("YmdHis")."-";
+					$filename = __DIR__."/kofi-data/".date("YmdHis")."-";
 					$nb = mt_rand(5,15);
 					for ($i = 0; $i<$nb; $i++) {
 						$c = mt_rand(0,35); // 0-9, a-z
