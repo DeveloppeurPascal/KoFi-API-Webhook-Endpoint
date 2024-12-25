@@ -14,7 +14,7 @@ In this code repository you will find a folder "src" containing the PHP program 
 
 Set it up with your control token, install it all on your website (preferably in a complicated folder not to fall on it by chance) and give its URL to Ko-fi.
 
-At each call (so each payment) the program checks the consistency of what it receives and stores the data in a file in the subfolder "kofi-data" in the form "AAMMJJHHMMSS-xxx.json" (AAAA for the year, MM for the month, JJ for the day, HH for the moment, MM for the minutes, SS for the seconds and xxx as the random alphanumeric value).
+At each call (so each payment) the program checks the consistency of what it receives and stores the data in a file in the subfolder "kofi-data" in the form "AAMMJJHHMMSS-xxx.json" (AAAA for the year, MM for the month, JJ for the day, HH for the hours, MM for the minutes, SS for the seconds and xxx as the random alphanumeric value).
 
 All you have to do is browse this folder regularly to process its content and do what you need.
 
